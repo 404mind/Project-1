@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Sommet Bold';
+    src: url('SommetBold.woff2') format('woff2'),
+    url('SommetBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sommet';
+    src: url('Sommet.woff2') format('woff2'),
+    url('Sommet.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sommet Black';
+    src: url('SommetBlack.woff2') format('woff2'),
+    url('SommetBlack.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
