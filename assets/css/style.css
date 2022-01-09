@@ -2,7 +2,6 @@ body {
     font-family: 'Sommet', sans-serif;
     color: var(--grey);
     font-weight: 600;
-    overflow-x: hidden;
 }
 
 :root {
@@ -49,6 +48,10 @@ header {
 
 .section-title h3 {
     margin: 1em 0;
+}
+
+.concepta-navbar {
+    transition: 500ms;
 }
 
 .concepta-navbar > .container-fluid {
@@ -137,18 +140,19 @@ header {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.on-top .logo-wrapper {
-    height: 80px;
+.on-top .logo-wrapper, .logo-wrapper:not(.big-logo) {
+    height: 90px;
     padding: 0;
     margin: 0 auto;
 }
 
-.on-top .logo-wrapper:before, .on-top .logo-wrapper:after, .on-top .logo-wrapper > :first-child:before, .on-top .logo-wrapper > :first-child:after {
+.on-top .logo-wrapper:before, .on-top .logo-wrapper:after, .on-top .logo-wrapper > :first-child:before, .on-top .logo-wrapper > :first-child:after,
+.logo-wrapper:not(.big-logo):before, .logo-wrapper:not(.big-logo):after, .logo-wrapper:not(.big-logo) > :first-child:before, .logo-wrapper:not(.big-logo) > :first-child:after {
     border-width: 0;
     border-color: transparent;
 }
 
-.on-top .logo-wrapper img {
+.on-top .logo-wrapper img, .logo-wrapper:not(.big-logo) img {
     background: none;
     padding: 0;
 }
@@ -310,6 +314,10 @@ header {
     display: grid;
 }
 
+.projects-page .project-wrapper {
+    margin-bottom: 4em;
+}
+
 .project-wrapper:before, .project-wrapper:after {
     content: '';
     position: absolute;
@@ -346,14 +354,25 @@ header {
     transition: 1s;
 }
 
-.project-wrapper:hover .project-content {
+.project-wrapper:hover .project-content, .projects-page .project-wrapper .project-content {
     width: calc(100% - 29px);
     height: calc(100% - 29px);
     opacity: 1;
 }
 
+.projects-page .project-wrapper .project-content a {
+    transition: 500ms ease-in;
+    opacity: 0;
+}
+
+.projects-page .project-wrapper:hover .project-content a {
+
+    opacity: 1;
+}
+
 .project-content h5 {
     color: var(--dark-blue);
+    text-transform: uppercase;
 }
 
 .project-content a {
@@ -373,7 +392,7 @@ header {
     opacity: 0;
 }
 
-.project-wrapper:hover .project-content * {
+.project-wrapper:hover .project-content *, .projects-page .project-wrapper .project-content * {
     max-height: 500px;
     opacity: 1;
     transition-duration: 1s, 1.5s;
@@ -400,9 +419,10 @@ header {
 .team-section {
     background-image: url("../images/background.svg");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    background-position: left;
+    background-size: cover;
     padding-bottom: 3em;
+    overflow-x: hidden;
 }
 
 .team-wrapper {
@@ -447,6 +467,71 @@ header {
 
 .team-info h4 {
     color: var(--dark-blue);
+}
+
+/*Projects page*/
+
+.projects-head {
+    background-image: url("../images/projects-top.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.projects-head:before {
+    background: -webkit-linear-gradient(top, rgba(200, 200, 220, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.projects-head h1 {
+    font-size: 50px;
+    margin: 160px 0;
+    text-align: center;
+    color: var(--light-blue);
+    z-index: 1;
+}
+
+footer {
+    padding: 2em 0;
+    background-image: url(../images/background.svg);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+.footer-left, .footer-right {
+    border-width: 5px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+            0deg, rgba(21, 88, 145, 1)  0%, rgba(21, 88, 145, 1)  40%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    /*border-image-source: linear-gradient(*/
+    /*        0deg, rgba(21, 88, 145, 1) 0%, rgba(21, 88, 145, 1) 40%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%);*/
+    padding: 2em;
+}
+
+.footer-left {
+    border-right: none;
+}
+
+.footer-right {
+    border-left: none;
+}
+
+.footer-middle {
+    border: 5px solid #155891;
+    /*border: 5px solid white;*/
+    border-bottom: none;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-middle img {
+    max-width: 100%;
+    max-height: 200px;
 }
 
 .slide-right {

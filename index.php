@@ -1,90 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Concepta</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:title" content="Concepta"/>
-    <meta property="og:site_name" content="Concepta"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta name="twitter:image" content=""/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Concepta"/>
-    <meta name="twitter:site" content=""/>
-    <meta name="twitter:description" content=""/>
-    <meta name="twitter:creator" content=""/>
-    <meta name="twitter:url" content=""/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <!--    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>-->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/1cd199128e.js"></script>
-    <script src="./assets/scripts/script.js"></script>
-
-</head>
+<?php
+    include('./pages/common/head.php');
+?>
 <body>
 
-<header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light concepta-navbar">
-        <div class="container-fluid">
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggler" aria-controls="navbarToggler"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <div class="row w-100">
-                <div class="col-lg-6">
-                    <a href="" class="logo-wrapper">
-                        <div>
-                            <img src="./assets/images/logo-full.png"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 nav-items-wrapper">
-                    <div class="collapse navbar-collapse w-100" id="navbarToggler">
-                        <div class="row nav-items">
-                            <a href="" class="col-12 col-md-6 col-xl-3 active">
-                                <span>
-                                    HOME
-                                </span>
-                            </a>
-                            <a href="" class="col-md-6 col-xl-3">
-                                <span>
-                                    ABOUT
-                                </span>
-                            </a>
-                            <a href="" class="col-md-6 col-xl-3">
-                                <span>
-                                    PROJECTS
-                                </span>
-                            </a>
-                            <a href="" class="col-md-6 col-xl-3">
-                                <span>
-                                    CONTACT
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+<?php
+    include('./pages/common/header.php');
+?>
 <main>
     <section class="banner-section">
         <div class="banner-img">
@@ -116,7 +39,7 @@
                 </div>
                 <div class="col-lg-4 intro-img-wrapper">
                     <div>
-                        <img src="assets/images/intro-pic.png">
+                        <img src="<?=PROJECT_ASSETS . 'images/intro-pic.png'?>">
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -145,7 +68,7 @@
                             The following pages will provide an overview of the projects executed by
                             our company members.
                         </p>
-                        <img src="assets/images/intro-quote.png">
+                        <img src="<?=PROJECT_ASSETS . 'images/intro-quote.png'?>">
                     </div>
                 </div>
             </div>
@@ -161,7 +84,7 @@
                 <div class="row team-wrapper">
                     <div class="col-lg-3 show-on-scroll slide-right">
                         <div>
-                            <img src="assets/images/Asset%209.png">
+                            <img src="<?=PROJECT_ASSETS . 'images/Asset%209.png'?>">
                             <div class="team-info">
                                 <h4>Omar Ayache</h4>
                                 <h6>Advisor / Partner</h6>
@@ -170,8 +93,10 @@
                     </div>
                     <div class="col-lg-9 show-on-scroll slide-left">
                         <p>
-                            Omar started his career in Financial Services in 1992 at SBC O’Connor (later UBS). He has extensive experience
-                            in derivatives, structured products, alternative assets and FX and Equities. Omar has worked for SBC/UBS and
+                            Omar started his career in Financial Services in 1992 at SBC O’Connor (later UBS). He has
+                            extensive experience
+                            in derivatives, structured products, alternative assets and FX and Equities. Omar has worked
+                            for SBC/UBS and
                             Goldman Sachs. Omar has an M.A. in Engineering from Pembroke College, Cambridge.
                         </p>
                     </div>
@@ -179,7 +104,7 @@
                 <div class="row team-wrapper flex-lg-row-reverse">
                     <div class="col-lg-3 show-on-scroll slide-right">
                         <div>
-                            <img src="assets/images/Asset%208.png">
+                            <img src="<?=PROJECT_ASSETS . 'images/Asset%208.png'?>">
                             <div class="team-info">
                                 <h4>Karim El Ayache</h4>
                                 <h6>Managing Director</h6>
@@ -188,16 +113,23 @@
                     </div>
                     <div class="col-lg-9 show-on-scroll slide-left">
                         <p>
-                            Omar started his career in Financial Services in 1992 at SBC O’Connor (later UBS). He has extensive experience
-                            in derivatives, structured products, alternative assets and FX and Equities. Omar has worked for SBC/UBS and
-                            Goldman Sachs. Omar has an M.A. in Engineering from Pembroke College, Cambridge.
+                            Karim has extensive education in the field of Construction and earned his Bachelors Degree
+                            with Honours in
+                            Civil Engineering and a Masters Degree from City University in the UK.<br/>
+                            Karim has 21 years of experience covering a wide variety of senior roles in the industry. He
+                            started as a site
+                            engineer in construction and went on to take a leadership role in the petroleum
+                            industry.<br/>
+                            He most recently held a role as Project Manager in Construction Management.<br/>
+                            His work experience includes Procurement, Cost Control, Planning, Negotiation of Tender
+                            Awards and Estimation.
                         </p>
                     </div>
                 </div>
                 <div class="row team-wrapper">
                     <div class="col-lg-3 show-on-scroll slide-right">
                         <div>
-                            <img src="assets/images/Asset%207.png">
+                            <img src="<?=PROJECT_ASSETS . '/images/Asset%207.png'?>">
                             <div class="team-info">
                                 <h4>Nadine Ayache</h4>
                                 <h6>International Business Developer</h6>
@@ -206,11 +138,16 @@
                     </div>
                     <div class="col-lg-9 show-on-scroll slide-left">
                         <p>
-                            Nadine who graduated from City university London with Bachelors in Management and System Science has
-                            18 years experience in international Real Estate investments, with a core knowledge in capital cities markets
-                            and their trends. She is based in London heading two British companies she founded: NAPI London, a property
-                            consultancy offering bespoke investment services for private clients interested in higher end of the market, as
-                            well as actively directing a newly launched award winning British make up brand called Code8. Nadine is highly
+                            Nadine who graduated from City university London with Bachelors in Management and System
+                            Science has
+                            18 years experience in international Real Estate investments, with a core knowledge in
+                            capital cities markets
+                            and their trends. She is based in London heading two British companies she founded: NAPI
+                            London, a property
+                            consultancy offering bespoke investment services for private clients interested in higher
+                            end of the market, as
+                            well as actively directing a newly launched award winning British make up brand called
+                            Code8. Nadine is highly
                             experienced in curating sustainable market opportunities for corporate platforms.
                         </p>
                     </div>
@@ -226,7 +163,7 @@
                     <h3>PROJECTS COMPLETED OR UNDER CONSTRUCTION</h3>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <div class="project-wrapper" style="background-image: url(assets/images/Project1.png)">
+                    <div class="project-wrapper" style="background-image: url(<?=PROJECT_ASSETS . 'images/projects/Project1.png'?>)">
                         <div class="project-content">
                             <h5>
                                 Port of Beirut
@@ -236,7 +173,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <div class="project-wrapper" style="background-image: url(assets/images/Project2.png)">
+                    <div class="project-wrapper" style="background-image: url(<?=PROJECT_ASSETS . 'images/projects/Project2.png'?>)">
                         <div class="project-content">
                             <h5>
                                 KING ABDULAZIZ INTERNATIONAL
@@ -247,7 +184,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <div class="project-wrapper" style="background-image: url(assets/images/Project3.png)">
+                    <div class="project-wrapper" style="background-image: url(<?=PROJECT_ASSETS . 'images/projects/Project3.png'?>)">
                         <div class="project-content">
                             <h5>
                                 FIRST NATIONAL BANK - LEBANON
@@ -264,9 +201,9 @@
     </section>
 
 </main>
-<footer>
-
-</footer>
+<?php
+    include('./pages/common/footer.php');
+?>
 
 </body>
 </html>
